@@ -51,5 +51,4 @@ Lihat `.env.example`. Penting: `JWT_SECRET` (wajib di production), `CORS_ORIGINS
 
 ## Catatan penting
 - Dataset evaluasi rekomendasi (141 kasus) **dibuat secara sintetis** dari master data; hasilnya belum menggantikan kasus nyata dari Telkom.
-- SUS (≥10 responden), perbandingan waktu (≥10 skenario), ZAP, dan build Docker **belum dijalankan** — data/alat nyata diperlukan.
 - Rotasi seluruh rahasia yang pernah ada di `.env` lama (JWT_SECRET, Google client, SMTP).
