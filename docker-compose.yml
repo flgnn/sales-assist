@@ -1,0 +1,18 @@
+# Demo / sidang: docker compose up --build  ->  http://localhost:3001
+services:
+  sales-assist:
+    build: .
+    image: sales-assist:2.0.0
+    ports:
+      - "3001:3001"
+    env_file:
+      - .env            # salin dari .env.example; JANGAN commit .env
+    environment:
+      NODE_ENV: production
+      SEED_ON_START: "1"
+    volumes:
+      - sales-assist-data:/app/data
+    restart: unless-stopped
+
+volumes:
+  sales-assist-data:

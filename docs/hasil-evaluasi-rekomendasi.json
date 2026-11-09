@@ -1,0 +1,47 @@
+{
+  "generated_at": "2026-11-02T12:47:22.352Z",
+  "split": "all",
+  "cases": 141,
+  "folds": 5,
+  "weights": {
+    "alpha": 0.75,
+    "beta": 0.25
+  },
+  "baseline_kp": {
+    "n": 141,
+    "top1": 0.3404255319148936,
+    "top3": 0.5319148936170213,
+    "mrr": 0.4349881796690307
+  },
+  "content_only": {
+    "n": 141,
+    "top1": 0.9219858156028369,
+    "top3": 0.9929078014184397,
+    "mrr": 0.9592198581560284
+  },
+  "hybrid": {
+    "n": 141,
+    "top1": 0.9361702127659575,
+    "top3": 0.9929078014184397,
+    "mrr": 0.9663120567375887
+  },
+  "delta_top3_pp": 46.1,
+  "target": {
+    "top3": 0.85,
+    "delta_pp": 10
+  },
+  "meets_target": true,
+  "failures_hybrid_top3": [
+    {
+      "id": "K122",
+      "text": "internet kantor",
+      "expected": "hsi|1S",
+      "got": [
+        "hsi|3S",
+        "hsi|2S",
+        "datin|IP Transit"
+      ],
+      "rank": 4
+    }
+  ]
+}

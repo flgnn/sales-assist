@@ -1,0 +1,58 @@
+{
+  "name": "sales-assist-backend",
+  "version": "2.0.0",
+  "description": "Sales Assist 2.0 — rekomendasi hibrida, persetujuan berjenjang, penawaran PDF/email, pipeline penjualan (Telkom Witel Priangan Timur)",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "seed": "node src/db/seed.js",
+    "seed:force": "node src/db/seed.js --force",
+    "test": "jest --runInBand",
+    "test:coverage": "jest --runInBand --coverage",
+    "eval:recommender": "node scripts/eval-recommender.js --split=all --md=docs/hasil-evaluasi-rekomendasi.md --json=docs/hasil-evaluasi-rekomendasi.json",
+    "loadtest": "node scripts/loadtest.js",
+    "sus": "node scripts/sus-score.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "better-sqlite3": "^11.10.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.4.2",
+    "exceljs": "^4.4.0",
+    "express": "^4.19.2",
+    "express-rate-limit": "^8.7.2",
+    "google-auth-library": "^10.9.1",
+    "helmet": "^8.3.0",
+    "jsonwebtoken": "^9.0.2",
+    "nodemailer": "^9.0.3",
+    "pdfkit": "^0.20.2",
+    "sql.js": "^1.14.1",
+    "sqlite3": "^6.0.1"
+  },
+  "devDependencies": {
+    "jest": "^30.5.2",
+    "supertest": "^7.3.1"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testTimeout": 20000,
+    "setupFiles": [
+      "<rootDir>/tests/setup.js"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/db/seed.js",
+      "!src/db/masterProductRecommendations.js",
+      "!src/routes/auth.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "lines": 70,
+        "statements": 70,
+        "functions": 70,
+        "branches": 55
+      }
+    }
+  }
+}

@@ -1,0 +1,851 @@
+{
+ "description": "Kasus uji berlabel sintetis untuk evaluasi mesin rekomendasi Sales Assist 2.0. Label = layanan master data (sheet|layanan) yang menjadi kebutuhan utama. Kasus ditulis oleh pengembang menyerupai catatan kebutuhan Sales (bukan data pelanggan nyata).",
+ "cases": [
+  {
+   "id": "K001",
+   "text": "Warung kopi di Tasikmalaya butuh internet bisnis biasa buat kasir dan wifi pelanggan, anggaran terbatas",
+   "expected": "hsi|1S",
+   "split": "dev"
+  },
+  {
+   "id": "K002",
+   "text": "Toko bangunan kecil ingin pasang internet 50 Mbps saja, tidak perlu telepon atau tv",
+   "expected": "hsi|1S",
+   "split": "test"
+  },
+  {
+   "id": "K003",
+   "text": "Kantor notaris satu ruko minta langganan internet cepat untuk 5 komputer",
+   "expected": "hsi|1S",
+   "split": "dev"
+  },
+  {
+   "id": "K004",
+   "text": "Klinik gigi butuh koneksi internet untuk pendaftaran online, cukup internet saja",
+   "expected": "hsi|1S",
+   "split": "test"
+  },
+  {
+   "id": "K005",
+   "text": "Kami startup kecil di Ciamis, perlu internet kantor yang murah dan stabil untuk 10 orang",
+   "expected": "hsi|1S",
+   "split": "dev"
+  },
+  {
+   "id": "K006",
+   "text": "Agen travel membutuhkan HSI bisnis basic 100 Mbps tanpa tambahan layanan",
+   "expected": "hsi|1S",
+   "split": "test"
+  },
+  {
+   "id": "K007",
+   "text": "Bengkel motor mau pasang indihome bisnis untuk laptop admin dan pembayaran digital",
+   "expected": "hsi|1S",
+   "split": "dev"
+  },
+  {
+   "id": "K008",
+   "text": "Pelanggan butuh paket internet bisnis esensial untuk usaha laundry kiloan 2 outlet",
+   "expected": "hsi|1S",
+   "split": "test"
+  },
+  {
+   "id": "K009",
+   "text": "Percetakan di Banjar minta pasang internet kecepatan 75 Mbps, hanya akses internet",
+   "expected": "hsi|1S",
+   "split": "dev"
+  },
+  {
+   "id": "K010",
+   "text": "Koperasi desa perlu sambungan internet sederhana untuk sistem simpan pinjam",
+   "expected": "hsi|1S",
+   "split": "test"
+  },
+  {
+   "id": "K011",
+   "text": "Kantor cabang butuh internet plus telepon kantor (voice) untuk 8 extension",
+   "expected": "hsi|2S",
+   "split": "dev"
+  },
+  {
+   "id": "K012",
+   "text": "Perusahaan ekspedisi ingin internet disertai monitoring router Netmonk agar jaringan terpantau",
+   "expected": "hsi|2S",
+   "split": "test"
+  },
+  {
+   "id": "K013",
+   "text": "Bank perkreditan rakyat butuh internet dan layanan call center OCA untuk melayani nasabah via WhatsApp",
+   "expected": "hsi|2S",
+   "split": "dev"
+  },
+  {
+   "id": "K014",
+   "text": "Hotel melati ingin paket internet plus IPTV untuk kamar tamu",
+   "expected": "hsi|2S",
+   "split": "test"
+  },
+  {
+   "id": "K015",
+   "text": "Rumah makan minta internet bisnis ditambah mesh wifi supaya sinyal merata di dua lantai",
+   "expected": "hsi|2S",
+   "split": "dev"
+  },
+  {
+   "id": "K016",
+   "text": "Toko emas mau internet bersama kamera indoor eazy cam untuk pantau etalase",
+   "expected": "hsi|2S",
+   "split": "test"
+  },
+  {
+   "id": "K017",
+   "text": "Kantor kecamatan perlu internet dan nomor telepon fixed line untuk layanan publik",
+   "expected": "hsi|2S",
+   "split": "dev"
+  },
+  {
+   "id": "K018",
+   "text": "Sekolah swasta minta internet bundling dengan Pijar Sekolah untuk 2 gedung",
+   "expected": "hsi|2S",
+   "split": "test"
+  },
+  {
+   "id": "K019",
+   "text": "Perusahaan distribusi ingin HSI plus voice untuk tim admin 12 orang",
+   "expected": "hsi|2S",
+   "split": "dev"
+  },
+  {
+   "id": "K020",
+   "text": "Resto cafe ingin paket internet yang sudah termasuk tv berlangganan IPTV di area makan",
+   "expected": "hsi|2S",
+   "split": "test"
+  },
+  {
+   "id": "K021",
+   "text": "Hotel butuh paket triple play: internet, telepon, dan tv kabel untuk 30 kamar",
+   "expected": "hsi|3S",
+   "split": "dev"
+  },
+  {
+   "id": "K022",
+   "text": "Rumah sakit klinik butuh internet + IPTV + voice dalam satu paket bundling",
+   "expected": "hsi|3S",
+   "split": "test"
+  },
+  {
+   "id": "K023",
+   "text": "Kos eksklusif ingin layanan lengkap internet, telepon, dan tayangan televisi untuk pengelola",
+   "expected": "hsi|3S",
+   "split": "dev"
+  },
+  {
+   "id": "K024",
+   "text": "Penginapan di Pangandaran mau 3S, yaitu internet, IPTV, dan voice 100 Mbps",
+   "expected": "hsi|3S",
+   "split": "test"
+  },
+  {
+   "id": "K025",
+   "text": "Kantor yayasan ingin paket lengkap tiga layanan internet telepon dan IPTV",
+   "expected": "hsi|3S",
+   "split": "dev"
+  },
+  {
+   "id": "K026",
+   "text": "Villa keluarga disewakan butuh internet kencang plus televisi dan telepon rumah",
+   "expected": "hsi|3S",
+   "split": "test"
+  },
+  {
+   "id": "K027",
+   "text": "Hotel 40 kamar butuh wifi managed supaya tamu bisa login dan Telkom yang mengelola access point",
+   "expected": "wifi|WMS Standar",
+   "split": "dev"
+  },
+  {
+   "id": "K028",
+   "text": "Kafe ramai ingin pasang wifi terkelola dengan banyak access point dan portal login",
+   "expected": "wifi|WMS Standar",
+   "split": "test"
+  },
+  {
+   "id": "K029",
+   "text": "Gedung perkantoran minta layanan WMS Gold untuk karyawan dan tamu, dikelola penuh oleh Telkom",
+   "expected": "wifi|WMS Standar",
+   "split": "dev"
+  },
+  {
+   "id": "K030",
+   "text": "Mall kecil butuh wifi publik dengan cakupan luas tanpa dead zone, 200 Mbps",
+   "expected": "wifi|WMS Standar",
+   "split": "test"
+  },
+  {
+   "id": "K031",
+   "text": "Universitas swasta membutuhkan wifi kampus terkelola dengan WMS Platinum",
+   "expected": "wifi|WMS Standar",
+   "split": "dev"
+  },
+  {
+   "id": "K032",
+   "text": "Restoran keluarga ingin hotspot untuk pengunjung dengan landing page promosi",
+   "expected": "wifi|WMS Standar",
+   "split": "test"
+  },
+  {
+   "id": "K033",
+   "text": "Bandara kecil butuh wifi area tunggu dikelola vendor, kapasitas 300 Mbps",
+   "expected": "wifi|WMS Standar",
+   "split": "dev"
+  },
+  {
+   "id": "K034",
+   "text": "Co-working space ingin wifi managed standar untuk 100 pengguna bersamaan",
+   "expected": "wifi|WMS Standar",
+   "split": "test"
+  },
+  {
+   "id": "K035",
+   "text": "Kantor desa ingin wifi terkelola paket fit dengan harga menengah 75 Mbps",
+   "expected": "wifi|WMS Fit",
+   "split": "dev"
+  },
+  {
+   "id": "K036",
+   "text": "Toko ritel minta WMS Fit Gold untuk wifi pelanggan dan kasir",
+   "expected": "wifi|WMS Fit",
+   "split": "test"
+  },
+  {
+   "id": "K037",
+   "text": "Perpustakaan daerah butuh wifi dikelola Telkom dengan paket Fit 100 Mbps",
+   "expected": "wifi|WMS Fit",
+   "split": "dev"
+  },
+  {
+   "id": "K038",
+   "text": "Pusat kebugaran ingin wifi managed paket Fit supaya biaya terjangkau",
+   "expected": "wifi|WMS Fit",
+   "split": "test"
+  },
+  {
+   "id": "K039",
+   "text": "Warung makan kecil ingin wifi terkelola paling ekonomis, 30 Mbps cukup",
+   "expected": "wifi|WMS Lite",
+   "split": "dev"
+  },
+  {
+   "id": "K040",
+   "text": "Barbershop minta WMS Lite supaya pelanggan bisa wifi sambil menunggu",
+   "expected": "wifi|WMS Lite",
+   "split": "test"
+  },
+  {
+   "id": "K041",
+   "text": "Toko kelontong ingin hotspot sederhana murah dikelola Telkom",
+   "expected": "wifi|WMS Lite",
+   "split": "dev"
+  },
+  {
+   "id": "K042",
+   "text": "Salon kecantikan butuh wifi managed edisi lite 50 Mbps",
+   "expected": "wifi|WMS Lite",
+   "split": "test"
+  },
+  {
+   "id": "K043",
+   "text": "Kedai kopi pinggir jalan butuh wifi murah dengan paket silver lite",
+   "expected": "wifi|WMS Lite",
+   "split": "dev"
+  },
+  {
+   "id": "K044",
+   "text": "Warnet gaming house butuh koneksi latensi rendah untuk 20 PC gamer",
+   "expected": "wifi|WMS Gamer",
+   "split": "dev"
+  },
+  {
+   "id": "K045",
+   "text": "Kafe esports ingin wifi khusus gamer dengan ping stabil 40 Mbps",
+   "expected": "wifi|WMS Gamer",
+   "split": "test"
+  },
+  {
+   "id": "K046",
+   "text": "Rental PlayStation dan game online butuh jaringan lag rendah untuk pemain",
+   "expected": "wifi|WMS Gamer",
+   "split": "dev"
+  },
+  {
+   "id": "K047",
+   "text": "Komunitas gamer mau sewa wifi gamer 30 Mbps untuk turnamen mingguan",
+   "expected": "wifi|WMS Gamer",
+   "split": "test"
+  },
+  {
+   "id": "K048",
+   "text": "Pabrik tekstil ingin menghubungkan sensor mesin lewat wifi terintegrasi IoT",
+   "expected": "wifi|WMS x IoT",
+   "split": "dev"
+  },
+  {
+   "id": "K049",
+   "text": "Smart building perlu jaringan wifi untuk perangkat IoT dan sensor suhu",
+   "expected": "wifi|WMS x IoT",
+   "split": "test"
+  },
+  {
+   "id": "K050",
+   "text": "Greenhouse pertanian pintar butuh wifi untuk sensor kelembaban dan kontrol otomatis",
+   "expected": "wifi|WMS x IoT",
+   "split": "dev"
+  },
+  {
+   "id": "K051",
+   "text": "Gudang logistik ingin wifi industri untuk scanner dan perangkat IoT",
+   "expected": "wifi|WMS x IoT",
+   "split": "test"
+  },
+  {
+   "id": "K052",
+   "text": "Peternakan modern mau pasang sensor pakan dengan jaringan wifi khusus IoT",
+   "expected": "wifi|WMS x IoT",
+   "split": "dev"
+  },
+  {
+   "id": "K053",
+   "text": "Pengusaha RT RW net ingin jual voucher wifi ke warga dengan paket reseller",
+   "expected": "wifi|WMS Reseller",
+   "split": "dev"
+  },
+  {
+   "id": "K054",
+   "text": "Pemilik warung wifi mau berjualan voucher internet per jam ke pembeli",
+   "expected": "wifi|WMS Reseller",
+   "split": "test"
+  },
+  {
+   "id": "K055",
+   "text": "Kos-kosan 60 kamar ingin menjual voucher wifi bulanan ke penghuni",
+   "expected": "wifi|WMS Reseller",
+   "split": "dev"
+  },
+  {
+   "id": "K056",
+   "text": "Penyedia hotspot desa ingin bisnis reseller voucher 1000 pengguna",
+   "expected": "wifi|WMS Reseller",
+   "split": "test"
+  },
+  {
+   "id": "K057",
+   "text": "Kami mau membuka usaha voucher wifi di terminal, paket reseller 500 voucher",
+   "expected": "wifi|WMS Reseller",
+   "split": "dev"
+  },
+  {
+   "id": "K058",
+   "text": "Pengelola pasar tradisional ingin menjual akses wifi per voucher kepada pedagang",
+   "expected": "wifi|WMS Reseller",
+   "split": "test"
+  },
+  {
+   "id": "K059",
+   "text": "Kantor pusat perusahaan perbankan butuh internet dedicated simetris dengan IP publik",
+   "expected": "datin|Astinet",
+   "split": "dev"
+  },
+  {
+   "id": "K060",
+   "text": "Data center kecil minta Astinet 100 Mbps dengan uptime tinggi dan SLA",
+   "expected": "datin|Astinet",
+   "split": "test"
+  },
+  {
+   "id": "K061",
+   "text": "Pabrik besar butuh internet korporat anti putus untuk server ERP, 200 Mbps",
+   "expected": "datin|Astinet",
+   "split": "dev"
+  },
+  {
+   "id": "K062",
+   "text": "Pemda ingin internet dedicated untuk ujian online UNBK di sekolah negeri",
+   "expected": "datin|Astinet",
+   "split": "test"
+  },
+  {
+   "id": "K063",
+   "text": "Perusahaan fintech butuh koneksi internet premium upload sama dengan download",
+   "expected": "datin|Astinet",
+   "split": "dev"
+  },
+  {
+   "id": "K064",
+   "text": "Rumah sakit besar membutuhkan akses internet dedicated 50 Mbps dengan IP statis",
+   "expected": "datin|Astinet",
+   "split": "test"
+  },
+  {
+   "id": "K065",
+   "text": "Kampus negeri minta Astinet reguler 500 Mbps untuk jaringan akademik",
+   "expected": "datin|Astinet",
+   "split": "dev"
+  },
+  {
+   "id": "K066",
+   "text": "Perusahaan e-commerce butuh bandwidth simetris stabil tanpa lag untuk server gudang",
+   "expected": "datin|Astinet",
+   "split": "test"
+  },
+  {
+   "id": "K067",
+   "text": "Astinet Fit 20 Mbps untuk kantor cabang bank daerah",
+   "expected": "datin|Astinet",
+   "split": "dev"
+  },
+  {
+   "id": "K068",
+   "text": "Perusahaan media streaming butuh internet dedicated upload besar di Jawa Barat",
+   "expected": "datin|Astinet",
+   "split": "test"
+  },
+  {
+   "id": "K069",
+   "text": "ISP lokal butuh uplink internet global untuk pelanggan broadband mereka",
+   "expected": "datin|IP Transit",
+   "split": "dev"
+  },
+  {
+   "id": "K070",
+   "text": "Perusahaan telekomunikasi kecil minta layanan IP Transit 1 Gbps ke backbone",
+   "expected": "datin|IP Transit",
+   "split": "test"
+  },
+  {
+   "id": "K071",
+   "text": "Operator jaringan wholesale internet ingin kapasitas transit domestik dan global",
+   "expected": "datin|IP Transit",
+   "split": "dev"
+  },
+  {
+   "id": "K072",
+   "text": "Penyelenggara jasa internet di Priangan butuh akses langsung ke internet global 500 Mbps",
+   "expected": "datin|IP Transit",
+   "split": "test"
+  },
+  {
+   "id": "K073",
+   "text": "Carrier regional memerlukan IP transit reguler untuk peering dan routing BGP",
+   "expected": "datin|IP Transit",
+   "split": "dev"
+  },
+  {
+   "id": "K074",
+   "text": "Pelanggan colocation di data center neuCentrIX butuh IP Transit khusus di lokasi tersebut",
+   "expected": "datin|IP Transit NeuCentrIX",
+   "split": "dev"
+  },
+  {
+   "id": "K075",
+   "text": "Content provider di neuCentrIX ingin transit internet global dengan optimasi lokasi data center",
+   "expected": "datin|IP Transit NeuCentrIX",
+   "split": "test"
+  },
+  {
+   "id": "K076",
+   "text": "Perusahaan cloud yang berada di neucentrix minta IP transit 1 Gbps",
+   "expected": "datin|IP Transit NeuCentrIX",
+   "split": "dev"
+  },
+  {
+   "id": "K077",
+   "text": "Penyedia hosting di data center NeuCentrIX mau uplink internet transit 500 Mbps",
+   "expected": "datin|IP Transit NeuCentrIX",
+   "split": "test"
+  },
+  {
+   "id": "K078",
+   "text": "Bank daerah ingin menghubungkan 12 kantor cabang dengan jaringan private point to point",
+   "expected": "datin|Metro-E",
+   "split": "dev"
+  },
+  {
+   "id": "K079",
+   "text": "Perusahaan retail butuh koneksi antar toko ke server pusat lewat Metro Ethernet 50 Mbps",
+   "expected": "datin|Metro-E",
+   "split": "test"
+  },
+  {
+   "id": "K080",
+   "text": "Dinas pemerintahan ingin VPN antar kantor dengan jaringan tertutup dan aman",
+   "expected": "datin|Metro-E",
+   "split": "dev"
+  },
+  {
+   "id": "K081",
+   "text": "Pabrik mau sambungkan gudang dan kantor pusat dengan leased line, 100 Mbps",
+   "expected": "datin|Metro-E",
+   "split": "test"
+  },
+  {
+   "id": "K082",
+   "text": "Rumah sakit ingin jaringan data antar gedung agar sistem informasi tersinkron",
+   "expected": "datin|Metro-E",
+   "split": "dev"
+  },
+  {
+   "id": "K083",
+   "text": "Perusahaan distribusi butuh koneksi lokal antar cabang untuk database terpusat",
+   "expected": "datin|Metro-E",
+   "split": "test"
+  },
+  {
+   "id": "K084",
+   "text": "Universitas butuh link point to multipoint antar fakultas, 200 Mbps",
+   "expected": "datin|Metro-E",
+   "split": "dev"
+  },
+  {
+   "id": "K085",
+   "text": "Kami ingin menghubungkan tiga kantor perwakilan dengan jaringan data layer 2",
+   "expected": "datin|Metro-E",
+   "split": "test"
+  },
+  {
+   "id": "K086",
+   "text": "Koperasi besar butuh sambungan data antar kantor cabang tanpa lewat internet publik",
+   "expected": "datin|Metro-E",
+   "split": "dev"
+  },
+  {
+   "id": "K087",
+   "text": "Bank nasional butuh Metro-E dengan jalur redundan dual homing agar tetap hidup jika satu link putus",
+   "expected": "datin|Metro-E Dual Homing",
+   "split": "dev"
+  },
+  {
+   "id": "K088",
+   "text": "Perusahaan asuransi minta konektivitas antar kantor dengan high availability dan jalur cadangan",
+   "expected": "datin|Metro-E Dual Homing",
+   "split": "test"
+  },
+  {
+   "id": "K089",
+   "text": "Instansi vital butuh jaringan data redundan dua jalur dengan QoS andal",
+   "expected": "datin|Metro-E Dual Homing",
+   "split": "dev"
+  },
+  {
+   "id": "K090",
+   "text": "Operator pembayaran ingin Metro Ethernet dual homing untuk keandalan transaksi",
+   "expected": "datin|Metro-E Dual Homing",
+   "split": "test"
+  },
+  {
+   "id": "K091",
+   "text": "Pusat data pemerintah membutuhkan link antar lokasi dengan failover otomatis, dual homing",
+   "expected": "datin|Metro-E Dual Homing",
+   "split": "dev"
+  },
+  {
+   "id": "K092",
+   "text": "Pelanggan data center neuCentrIX butuh Metro-E dengan Big Pipe hingga 10 Gbps",
+   "expected": "datin|Metro-E NeuCentIX",
+   "split": "dev"
+  },
+  {
+   "id": "K093",
+   "text": "Perusahaan yang colocation di NeuCentIX ingin Metro Ethernet ke kantor pusat",
+   "expected": "datin|Metro-E NeuCentIX",
+   "split": "test"
+  },
+  {
+   "id": "K094",
+   "text": "Penyedia layanan cloud di neuCentrIX butuh link ethernet antar data center, 1 Gbps",
+   "expected": "datin|Metro-E NeuCentIX",
+   "split": "dev"
+  },
+  {
+   "id": "K095",
+   "text": "Metro-E paket neucentix untuk menghubungkan rack server ke jaringan kantor",
+   "expected": "datin|Metro-E NeuCentIX",
+   "split": "test"
+  },
+  {
+   "id": "K096",
+   "text": "Toko swalayan ingin pasang 10 CCTV online yang bisa dipantau lewat HP",
+   "expected": "dbt|Antares Eazy",
+   "split": "dev"
+  },
+  {
+   "id": "K097",
+   "text": "Kantor desa butuh 4 kamera pengawas outdoor EazyCam sewa bulanan",
+   "expected": "dbt|Antares Eazy",
+   "split": "test"
+  },
+  {
+   "id": "K098",
+   "text": "Pabrik ingin beli putus kamera indoor Eazy K5, 15 unit, sekali bayar",
+   "expected": "dbt|Antares Eazy",
+   "split": "dev"
+  },
+  {
+   "id": "K099",
+   "text": "Pemilik kos mau pasang IP camera di tiap lantai untuk keamanan",
+   "expected": "dbt|Antares Eazy",
+   "split": "test"
+  },
+  {
+   "id": "K100",
+   "text": "Gudang beras butuh 8 kamera keamanan dengan rekaman dan pantau jarak jauh",
+   "expected": "dbt|Antares Eazy",
+   "split": "dev"
+  },
+  {
+   "id": "K101",
+   "text": "Toko emas ingin pasang kamera pintar di etalase dan kasir",
+   "expected": "dbt|Antares Eazy",
+   "split": "test"
+  },
+  {
+   "id": "K102",
+   "text": "Sekolah mau pasang CCTV di koridor dan halaman, 12 titik",
+   "expected": "dbt|Antares Eazy",
+   "split": "dev"
+  },
+  {
+   "id": "K103",
+   "text": "Restoran ingin pantau dapur dan kasir lewat kamera di smartphone",
+   "expected": "dbt|Antares Eazy",
+   "split": "test"
+  },
+  {
+   "id": "K104",
+   "text": "Toko sudah punya kamera, ingin tambah penyimpanan rekaman di cloud 14 hari",
+   "expected": "dbt|Cloud Antares Eazy",
+   "split": "dev"
+  },
+  {
+   "id": "K105",
+   "text": "Kantor minta cloud recording CCTV 30 hari supaya rekaman aman tidak hilang",
+   "expected": "dbt|Cloud Antares Eazy",
+   "split": "test"
+  },
+  {
+   "id": "K106",
+   "text": "Minimarket butuh langganan cloud storage untuk rekaman kamera selama seminggu",
+   "expected": "dbt|Cloud Antares Eazy",
+   "split": "dev"
+  },
+  {
+   "id": "K107",
+   "text": "Pelanggan ingin rekaman CCTV tersimpan online 7 hari tanpa NVR lokal",
+   "expected": "dbt|Cloud Antares Eazy",
+   "split": "test"
+  },
+  {
+   "id": "K108",
+   "text": "Mall ingin menghitung jumlah pengunjung dengan analitik video people counting",
+   "expected": "dbt|AI Antares Eazy",
+   "split": "dev"
+  },
+  {
+   "id": "K109",
+   "text": "Pabrik minta deteksi asap dan api otomatis dari kamera CCTV",
+   "expected": "dbt|AI Antares Eazy",
+   "split": "test"
+  },
+  {
+   "id": "K110",
+   "text": "Perkantoran butuh deteksi penyusup di area terlarang pada malam hari",
+   "expected": "dbt|AI Antares Eazy",
+   "split": "dev"
+  },
+  {
+   "id": "K111",
+   "text": "Perusahaan ingin absensi karyawan otomatis dengan AI kamera, employee absence",
+   "expected": "dbt|AI Antares Eazy",
+   "split": "test"
+  },
+  {
+   "id": "K112",
+   "text": "Terminal ingin pantau kepadatan kerumunan secara real time dengan AI",
+   "expected": "dbt|AI Antares Eazy",
+   "split": "dev"
+  },
+  {
+   "id": "K113",
+   "text": "Parkir gedung ingin pantau kendaraan keluar masuk menggunakan video analytic",
+   "expected": "dbt|AI Antares Eazy",
+   "split": "test"
+  },
+  {
+   "id": "K114",
+   "text": "Pusat belanja butuh analitik orang masuk keluar toko dengan kamera pintar",
+   "expected": "dbt|AI Antares Eazy",
+   "split": "dev"
+  },
+  {
+   "id": "K115",
+   "text": "SMA swasta ingin aplikasi sekolah untuk rapor digital dan absensi siswa",
+   "expected": "dbt|PIJAR Sekolah",
+   "split": "dev"
+  },
+  {
+   "id": "K116",
+   "text": "Yayasan pendidikan butuh platform belajar online dan LMS untuk guru dan murid",
+   "expected": "dbt|PIJAR Sekolah",
+   "split": "test"
+  },
+  {
+   "id": "K117",
+   "text": "SMP negeri ingin portal guru dan tugas online terintegrasi",
+   "expected": "dbt|PIJAR Sekolah",
+   "split": "dev"
+  },
+  {
+   "id": "K118",
+   "text": "Pesantren modern minta sistem administrasi sekolah digital dan e-learning",
+   "expected": "dbt|PIJAR Sekolah",
+   "split": "test"
+  },
+  {
+   "id": "K119",
+   "text": "Sekolah dasar mau software sekolah untuk manajemen kelas dan ujian sekolah",
+   "expected": "dbt|PIJAR Sekolah",
+   "split": "dev"
+  },
+  {
+   "id": "K120",
+   "text": "Dinas pendidikan ingin pembelajaran digital bagi 20 sekolah binaan",
+   "expected": "dbt|PIJAR Sekolah",
+   "split": "test"
+  },
+  {
+   "id": "K121",
+   "text": "SMK butuh ekosistem digital belajar mengajar standalone tanpa paket internet",
+   "expected": "dbt|PIJAR Sekolah",
+   "split": "dev"
+  },
+  {
+   "id": "K122",
+   "text": "internet kantor",
+   "expected": "hsi|1S",
+   "split": "hard"
+  },
+  {
+   "id": "K123",
+   "text": "pasang cctv toko",
+   "expected": "dbt|Antares Eazy",
+   "split": "hard"
+  },
+  {
+   "id": "K124",
+   "text": "butuh wifi cafe, pengunjung ramai bisa login",
+   "expected": "wifi|WMS Standar",
+   "split": "hard"
+  },
+  {
+   "id": "K125",
+   "text": "cctv nya mau disimpan di cloud aja",
+   "expected": "dbt|Cloud Antares Eazy",
+   "split": "hard"
+  },
+  {
+   "id": "K126",
+   "text": "kantor cabang mau saling terhubung aman",
+   "expected": "datin|Metro-E",
+   "split": "hard"
+  },
+  {
+   "id": "K127",
+   "text": "wifi gaming",
+   "expected": "wifi|WMS Gamer",
+   "split": "hard"
+  },
+  {
+   "id": "K128",
+   "text": "kebutuhan: net kantor + telp, 2 line",
+   "expected": "hsi|2S",
+   "split": "hard"
+  },
+  {
+   "id": "K129",
+   "text": "kami ISP kecil perlu upstream",
+   "expected": "datin|IP Transit",
+   "split": "hard"
+  },
+  {
+   "id": "K130",
+   "text": "hotel mau wifi buat tamu + tv + telpon",
+   "expected": "hsi|3S",
+   "split": "hard"
+  },
+  {
+   "id": "K131",
+   "text": "sekolah mau aplikasi belajar",
+   "expected": "dbt|PIJAR Sekolah",
+   "split": "hard"
+  },
+  {
+   "id": "K132",
+   "text": "butuh koneksi dedicated buat server perusahaan",
+   "expected": "datin|Astinet",
+   "split": "hard"
+  },
+  {
+   "id": "K133",
+   "text": "mau jualan wifi ke tetangga pakai voucher",
+   "expected": "wifi|WMS Reseller",
+   "split": "hard"
+  },
+  {
+   "id": "K134",
+   "text": "kamera deteksi orang lewat dan hitung pengunjung",
+   "expected": "dbt|AI Antares Eazy",
+   "split": "hard"
+  },
+  {
+   "id": "K135",
+   "text": "wifi pabrik untuk sensor",
+   "expected": "wifi|WMS x IoT",
+   "split": "hard"
+  },
+  {
+   "id": "K136",
+   "text": "wifi murah buat warung",
+   "expected": "wifi|WMS Lite",
+   "split": "hard"
+  },
+  {
+   "id": "K137",
+   "text": "jaringan antar cabang bank harus tetap hidup walau satu jalur mati",
+   "expected": "datin|Metro-E Dual Homing",
+   "split": "hard"
+  },
+  {
+   "id": "K138",
+   "text": "kebutuhan wifii utk kantor desa, paket menengah",
+   "expected": "wifi|WMS Fit",
+   "split": "hard"
+  },
+  {
+   "id": "K139",
+   "text": "kita di neucentrix, perlu transit internet",
+   "expected": "datin|IP Transit NeuCentrIX",
+   "split": "hard"
+  },
+  {
+   "id": "K140",
+   "text": "link metro-e untuk rack kami di NeuCentrIX",
+   "expected": "datin|Metro-E NeuCentIX",
+   "split": "hard"
+  },
+  {
+   "id": "K141",
+   "text": "internet buat ruko, gak usah yang mahal",
+   "expected": "hsi|1S",
+   "split": "hard"
+  }
+ ]
+}

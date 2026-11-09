@@ -1,0 +1,9 @@
+node_modules/
+.env
+data/sales_assist.db
+data/sales_assist.db-wal
+data/sales_assist.db-shm
+coverage/
+docs/uat/sus_responses.csv
+docs/uat/waktu_penyusunan.csv
+data/rab_output/

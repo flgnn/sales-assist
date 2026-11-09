@@ -1,0 +1,10 @@
+node_modules
+.env
+.git
+.github
+data/*.db
+data/*.db-*
+data/xlsx_extract
+coverage
+docs
+tests
