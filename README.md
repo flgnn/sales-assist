@@ -41,7 +41,6 @@ Lihat `.env.example`. Penting: `JWT_SECRET` (wajib di production), `CORS_ORIGINS
 | `npm test` / `npm run test:coverage` | 78 tes (Jest + Supertest), ambang cakupan 70% |
 | `npm run eval:recommender` | Evaluasi rekomendasi → `docs/hasil-evaluasi-rekomendasi.*` |
 | `node scripts/loadtest.js --md=docs/hasil-uji-beban.md` | Uji beban 50 pengguna konkuren |
-| `npm run sus -- <csv>` | Hitung skor SUS dari `docs/uat/sus_responses_template.csv` |
 | `node scripts/time-analysis.js <csv>` | Analisis waktu penyusunan manual vs Sales Assist |
 
 ## Dokumen
