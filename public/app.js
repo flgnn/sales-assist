@@ -898,6 +898,13 @@ function makeDonutSvg(slices, centerText) {
 /* =========================================================
    RIWAYAT RAB — daftar sesi milik sales yang login
    ========================================================= */
+const APPROVAL_STATUS = {
+  draft: "Draft",
+  diajukan: "Menunggu persetujuan",
+  disetujui: "Disetujui",
+  ditolak: "Ditolak"
+};
+
 const HISTORY_STATUS = {
   draft: ["Draft", ""],
   analyzed: ["Dianalisis", "processing"],
@@ -979,13 +986,14 @@ function renderHistoryView() {
             ${sortableTh("industri", "Industri", state.historySortBy, state.historySortDir)}
             ${sortableTh("witel", "Witel", state.historySortBy, state.historySortDir)}
             ${sortableTh("status", "Status", state.historySortBy, state.historySortDir)}
+            <th>Persetujuan</th>
             ${sortableTh("total_biaya", "Total Biaya", state.historySortBy, state.historySortDir)}
             ${sortableTh("updated_at", "Terakhir diubah", state.historySortBy, state.historySortDir)}
             <th>Aksi</th>
           </tr>
         </thead>
         <tbody id="historyBody">
-          <tr><td colspan="8" class="muted" style="padding:20px;">Memuat riwayat…</td></tr>
+          <tr><td colspan="9" class="muted" style="padding:20px;">Memuat riwayat…</td></tr>
         </tbody>
       </table>
     </div>
@@ -1054,7 +1062,7 @@ function renderHistoryView() {
 
 function loadHistoryData(wrap) {
   const tbody = wrap.querySelector("#historyBody");
-  tbody.innerHTML = `<tr><td colspan="8" class="muted" style="padding:20px;">Memuat riwayat…</td></tr>`;
+  tbody.innerHTML = `<tr><td colspan="9" class="muted" style="padding:20px;">Memuat riwayat…</td></tr>`;
 
   const qs = new URLSearchParams({
     q: state.historySearch,
@@ -1081,7 +1089,7 @@ function loadHistoryData(wrap) {
       btnNext.disabled = pagination.page >= pagination.totalPages;
 
       if (!sessions || !sessions.length) {
-        tbody.innerHTML = `<tr><td colspan="8" class="muted" style="padding:20px;">Tidak ada riwayat RAB yang ditemukan.</td></tr>`;
+        tbody.innerHTML = `<tr><td colspan="9" class="muted" style="padding:20px;">Tidak ada riwayat RAB yang ditemukan.</td></tr>`;
         return;
       }
       tbody.innerHTML = sessions.map((s) => {
@@ -1093,6 +1101,7 @@ function loadHistoryData(wrap) {
           <td>${s.industri || "-"}</td>
           <td>${s.witel || "-"}</td>
           <td><span class="badge ${cls}" style="padding:4px 10px; font-size:10.5px;">${label}</span></td>
+          <td><span class="sa-chip sa-${escapeAttr(s.approval_status || "draft")}">${APPROVAL_STATUS[s.approval_status || "draft"] || escapeAttr(s.approval_status)}</span></td>
           <td><strong>${fmtRp(s.total_biaya)}</strong></td>
           <td class="muted">${updated}</td>
           <td style="white-space:nowrap;">
@@ -1122,7 +1131,7 @@ function loadHistoryData(wrap) {
       });
     })
     .catch((err) => {
-      tbody.innerHTML = `<tr><td colspan="8" style="padding:14px;"><div class="notice dark" style="margin:0;">${err.message}</div></td></tr>`;
+      tbody.innerHTML = `<tr><td colspan="9" style="padding:14px;"><div class="notice dark" style="margin:0;">${err.message}</div></td></tr>`;
     });
 }
 

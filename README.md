@@ -47,8 +47,25 @@ Lihat `.env.example`. Penting: `JWT_SECRET` (wajib di production), `CORS_ORIGINS
 - `docs/desain.md` — use case, ERD, daftar API, diagram alur persetujuan
 - `docs/rencana-vs-realisasi.md` — pemetaan rencana mingguan (1–14) ke kode dan bukti
 - `docs/hasil-evaluasi-rekomendasi.md`, `docs/hasil-uji-beban.md` — hasil terukur
-- `docs/uat/` — templat data SUS dan waktu
+- `docs/uat/` — templat data pengukuran waktu penyusunan
 
 ## Catatan penting
 - Dataset evaluasi rekomendasi (141 kasus) **dibuat secara sintetis** dari master data; hasilnya belum menggantikan kasus nyata dari Telkom.
+- Perbandingan waktu penyusunan (≥10 skenario) hanya boleh diisi dari hasil pengukuran nyata. Build Docker sudah diverifikasi (`docker compose up --build`, `/api/health` ok).
+- Pengiriman email berjalan mode uji (simulasi) sampai `SMTP_*` diisi.
+- Pengujian keamanan dibatasi pada uji otomatis kontrol keamanan (helmet/CSP, CORS, rate limit, ukuran payload).
 - Rotasi seluruh rahasia yang pernah ada di `.env` lama (JWT_SECRET, Google client, SMTP).
+
+## Mengunggah ke GitHub
+
+```bash
+git init
+git add .
+git status                # pastikan .env, node_modules, dan data/*.db TIDAK ikut
+git commit -m "Sales Assist 2.0 - Capstone"
+git branch -M main
+git remote add origin https://github.com/<akun>/sales-assist.git
+git push -u origin main
+```
+
+Buat dulu repositori kosong di GitHub (tanpa README). `.env` dan basis data sudah diabaikan oleh `.gitignore`; gunakan `.env.example` sebagai contoh konfigurasi. GitHub Actions (`.github/workflows/ci.yml`) otomatis menjalankan tes, cakupan, evaluasi rekomendasi, dan build Docker.

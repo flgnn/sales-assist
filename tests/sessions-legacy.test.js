@@ -10,6 +10,7 @@ test("riwayat: pencarian, sortir, paginasi, filter witel", async () => {
   let r = await request(app).get("/api/sessions?q=alfa").set(auth(t.sales));
   expect(r.status).toBe(200);
   expect(JSON.stringify(r.body)).toMatch(/PT Alfa/);
+  expect(r.body.sessions[0].approval_status).toBe("draft"); // riwayat menampilkan status persetujuan
   for (const q of ["sort=oldest", "sort=name", "sortBy=nama_pelanggan&sortDir=asc", "witel=priangan", "page=1&limit=1"]) {
     expect((await request(app).get(`/api/sessions?${q}`).set(auth(t.sales))).status).toBe(200);
   }

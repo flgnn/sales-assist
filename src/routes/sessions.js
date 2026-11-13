@@ -166,7 +166,7 @@ router.post("/", requireAuth, requirePermission("session:create"), (req, res) =>
 router.get("/", requireAuth, (req, res) => {
   const { q, witel, sort = "latest", page = 1, limit = 10 } = req.query;
 
-  let query = "SELECT id, nama_pelanggan, industri, witel, status, rab_nomor, is_bookmarked, created_at, updated_at FROM sessions WHERE user_id = ?";
+  let query = "SELECT id, nama_pelanggan, industri, witel, status, approval_status, rab_nomor, is_bookmarked, created_at, updated_at FROM sessions WHERE user_id = ?";
   const params = [req.user.id];
 
   if (witel && witel.trim() && witel.toLowerCase() !== "semua" && witel.toLowerCase() !== "all") {

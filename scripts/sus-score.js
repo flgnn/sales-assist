@@ -29,7 +29,7 @@ module.exports = { susScore, analyze };
 
 if (require.main === module) {
   const file = process.argv[2] || "docs/uat/sus_responses.csv";
-  if (!fs.existsSync(file)) { console.error(`Berkas ${file} tidak ditemukan. Salin docs/uat/sus_responses_template.csv lalu isi dengan respons responden nyata.`); process.exit(2); }
+  if (!fs.existsSync(file)) { console.error(`Berkas ${file} tidak ditemukan. Isi berkas CSV dengan respons responden nyata.`); process.exit(2); }
   const r = analyze(fs.readFileSync(file, "utf8"));
   console.table(r.rows);
   console.log(`n=${r.n} | rata-rata SUS=${r.mean} | min=${r.min} | max=${r.max} | target (n>=10 & rata-rata>=70): ${r.meets_target ? "TERCAPAI" : "BELUM"}`);
